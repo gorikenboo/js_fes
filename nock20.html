@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getPaidHolidays(s) {
+            let sp = s.split(/\s/);
+            let j = 0;
+            for (let i = 0; i < sp.length; i++) {
+                if (sp[i] == "no") {
+                    j = j + 1;
+                }
+            }
+            return j;
+        }
+
+        console.log(getPaidHolidays('yes yes yes yes no no yes'));    // 2
+        console.log(getPaidHolidays('yes no no no no no yes'));    // 5
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function createSequence(m, n) {
+            ans = [];
+            for (let i = 0; i < 10; i++) {
+                ans.push(m + (i * n) + " ");
+            }
+            return ans.join('');
+        }
+
+        console.log(createSequence(3, 3));    // 3 6 9 12 15 18 21 24 27 30
+        console.log(createSequence(5, 10));    // 5 15 25 35 45 55 65 75 85 95
+        console.log(createSequence(1, 3));    // 1 4 7 10 13 16 19 22 25 28
+
+    </script>
+</body>
+
+</html>

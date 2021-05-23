@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getOneToN(s, n) {
+            let conv = s.split('');
+            let convv = [];
+            for (let i = 0; i < n; i++) {
+                convv.push(conv[i]);
+            }
+            return convv.join('');
+        }
+        console.log(getOneToN('aabbccdd', 5));    // aabbc
+        console.log(getOneToN('gsacademyfukuoka', 9));    // gsacademy
+    </script>
+</body>
+
+</html>

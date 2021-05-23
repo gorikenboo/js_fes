@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function createList(n) {
+            ans = [];
+            for (let i = 1; i < 10; i++) {
+                ans.push(i * n + " ");
+            }
+            return ans.join('');
+        }
+
+        console.log(createList(2));    // 2 4 6 8 10 12 14 16 18
+        console.log(createList(3));    // 3 6 9 12 15 18 21 24 27
+        console.log(createList(5));    // 5 10 15 20 25 30 35 40 45
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function zeroPadding3(n) {
+            if (n < 10) {
+                return "00" + n;
+            }
+            else if (10 < n) {
+                return "0" + n;
+            }
+        }
+
+        console.log(zeroPadding3(98));    // 098
+        console.log(zeroPadding3(2));    // 002
+
+    </script>
+</body>
+
+</html>

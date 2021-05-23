@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getNumberOfA(s) {
+            let sp = s.split('');
+            let j = 0;
+            for (let i = 0; i < sp.length; i++) {
+                if (sp[i] == "A") {
+                    j = j + 1;
+                }
+            }
+            return j;
+        }
+
+        console.log(getNumberOfA('GSACADEMY'));    // 2
+        console.log(getNumberOfA('aAaAaA'));    // 3
+        console.log(getNumberOfA('JavaScript'));    // 0
+    </script>
+</body>
+
+</html>
