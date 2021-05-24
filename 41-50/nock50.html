@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fireEmployees(employees, fireEmployees) {
+            ff = fireEmployees.split(' ')
+            ee = [];
+            for (let i = 0; i < ff.length; i++) {
+                employees = employees.replace(ff[i], '');
+            }
+            return employees
+        }
+
+        console.log(fireEmployees('Jotaro Joseph Avdol Polnareff Tenmei Iggy', 'Avdol Tenmei Iggy'));    // Jotaro Joseph Polnareff
+        console.log(fireEmployees('Giorno Bucciarati Abbacchio Mista Narancia Fugo Trish', 'Bucciarati Abbacchio Narancia'));    // Giorno Mista Fugo Trish
+        console.log(fireEmployees('Jolyne Ermes Emporio F・F Weather Anasui', 'Jolyne Ermes F・F Weather Anasui'));    // Emporio
+
+    </script>
+</body>
+
+</html>

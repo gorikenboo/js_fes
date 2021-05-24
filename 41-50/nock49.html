@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function convertToUppercase(s) {
+            let conv = s.split('');
+            let convv = [];
+            alp = ["１", "２", "３", "４", "５", "６", "７", "８", "９", "０"];
+            alpp = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+            for (let i = 0; i < conv.length; i++) {
+                for (let j = 0; j < 26; j++) {
+                    if (alpp[j] == conv[i]) {
+                        convv.push(alp[j] + "");
+                    }
+                }
+            } return convv.join('');
+
+        }
+
+        console.log(convertToUppercase('1234567'));    // １２３４５６７
+        console.log(convertToUppercase('1111111'));    // １１１１１１１
+        console.log(convertToUppercase('1145140'));    // １１４５１４０
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function probabilityGetSSR(n, t) {
+            return Math.round((1 - (1 - n / 100) ** t) * 100)
+        }
+
+        console.log(probabilityGetSSR(1, 100));    // 63
+        console.log(probabilityGetSSR(1.5, 70));    // 65
+        console.log(probabilityGetSSR(1, 200));    // 87
+
+
+    </script>
+</body>
+
+</html>
+return Math.floor((1 - (n / 100) ** t) * 100)

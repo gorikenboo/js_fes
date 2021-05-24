@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isEquilateralTriangle(s) {
+            let ss = s.split(/\s/).map(Number);
+            if (ss[0] == ss[1])
+                if (ss[2] == ss[1]) {
+
+                    return "Yes"
+                }
+                else {
+                    return "No"
+                }
+            else {
+                return "No"
+            }
+        }
+
+        console.log(isEquilateralTriangle('10 10 10'));    // yes
+        console.log(isEquilateralTriangle('3 4 5'));    // No
+
+    </script>
+</body>
+
+</html>

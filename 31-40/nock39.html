@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getInterval(s) {
+            let ss = s.split(/\s/).map(Number);
+            let sss = [];
+            for (let i = 0; i < 4; i++) {
+                sss.push(ss[i + 1] - ss[i]);
+            }
+            return sss.join(" ")
+        }
+
+        console.log(getInterval('5 8 19 25 31'));    // 3 11 6 6
+        console.log(getInterval('2 3 7 9 28'));    // 1 4 2 19
+
+    </script>
+</body>
+
+</html>

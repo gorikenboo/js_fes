@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getStartTimeForCook(s, t) {
+            let time = new Date();
+            let ss = s.split(":").map(Number);
+            time.setHours(ss[0] - (Math.floor(t / 60)));
+            time.setMinutes(ss[1] - (t % 60))
+            return time.getHours() + ":" + time.getMinutes()
+        }
+
+        console.log(getStartTimeForCook('19:00', 90));    // 17:30
+        console.log(getStartTimeForCook('20:00', 20));    // 19:40
+        console.log(getStartTimeForCook('20:30', 80));    // 19:10
+
+    </script>
+</body>
+
+</html>
+return Math.floor((1 - (n / 100) ** t) * 100)

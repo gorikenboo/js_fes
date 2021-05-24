@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isReadyForSummer(s) {
+            ss = s.split(' ');
+            let j = 0;
+            for (let i = 0; i < ss.length; i++) {
+                if (ss[i] == "W") {
+                    j = j + 1;
+                }
+            }
+            if (5 < j) {
+                return "NG"
+            }
+            else {
+                return "OK"
+            }
+        }
+
+        console.log(isReadyForSummer('W W W W W S S S S S'));    // OK
+        console.log(isReadyForSummer('S S W W S W W W W W'));    // NG
+        console.log(isReadyForSummer('W S S S S S S S S W'));    // OK
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function canParty(s) {
+            if (11 <= s.split("").map(Number).length) {
+                return "OK"
+            }
+            else {
+                return (11 - s.split("").map(Number).length) + "本足りねえよ"
+            }
+
+        }
+
+        console.log(canParty('11111111111'));    // OK
+        console.log(canParty('1111'));    // 7
+        console.log(canParty('1111111111111111'));    // OK
+
+
+    </script>
+</body>
+
+</html>

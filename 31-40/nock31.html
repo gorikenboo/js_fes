@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function canStoreBooks(s) {
+            if (s.split(/\s/).map(Number)[1] * s.split(/\s/).map(Number)[2] > s.split(/\s/).map(Number)[0]) {
+                return "OK"
+            }
+            else {
+                return "NG"
+            }
+        }
+
+        console.log(canStoreBooks('400 5 85'));    // OK
+        console.log(canStoreBooks('500 4 70'));    // NG
+
+    </script>
+</body>
+
+</html>

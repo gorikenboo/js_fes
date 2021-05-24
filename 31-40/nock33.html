@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function daysOfGoOut(s) {
+            let ss = s.split(/\s/).map(Number);
+            let j = 0;
+            for (let i = 0; i < 7; i++) {
+                if (ss[i] <= 30) {
+                    j = j + 1;
+                }
+            }
+            return j
+        }
+
+        console.log(daysOfGoOut('13 0 15 30 89 100 30'));    // 5
+        console.log(daysOfGoOut('0 14 18 22 0 2 4'));    // 7
+        console.log(daysOfGoOut('99 99 99 99 99 99 99'));    // 0
+
+    </script>
+</body>
+
+</html>

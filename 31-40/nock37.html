@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function convertNumberToAlphabet(s) {
+            let conv = s.split('');
+            let convv = [];
+            alpp = ["5", "4", "3", "2", "1"];
+            alp = ["A", "B", "C", "D", "E"];
+            for (let i = 0; i < conv.length; i++) {
+                for (let j = 0; j < 26; j++) {
+                    if (alpp[j] == conv[i]) {
+                        convv.push(alp[j] + "鼻");
+                    }
+                }
+            }
+            return convv.join('');
+        }
+
+
+        console.log(convertNumberToAlphabet('53342'));    // ACCBD
+        console.log(convertNumberToAlphabet('22222'));    // DDDDD
+        console.log(convertNumberToAlphabet('51111'));    // AEEEE
+
+    </script>
+</body>
+
+</html>

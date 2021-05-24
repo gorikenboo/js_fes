@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function formatYMD(s) {
+            let a = s.split(/\s/).map(Number)[0]
+            let b = s.split(/\s/).map(Number)[1]
+            let c = s.split(/\s/).map(Number)[2]
+            return ('0000' + a).slice(-4) + "/" + ('00' + b).slice(-2) + "/" + ('00' + c).slice(-2)
+        }
+
+        console.log(formatYMD('2021 1 1'));    // 2021/01/01
+        console.log(formatYMD('2020 10 10'));    // 2020/10/10
+        console.log(formatYMD('794 11 29'));    // 0794/11/29
+
+    </script>
+</body>
+
+</html>

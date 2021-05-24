@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getInitialFromName(s) {
+            return s.charAt(0) + "." + s.charAt(s.indexOf(" ") + 1)
+        }
+
+        console.log(getInitialFromName('Dio Brando'));    // D.B
+        console.log(getInitialFromName('Pannacotta Fugo'));    // P.F
+        console.log(getInitialFromName('Gyro Zeppeli'));    // G.Z
+
+    </script>
+</body>
+
+</html>
