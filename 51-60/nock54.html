@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function containStrings(str1, str2) {
+            if (str1.indexOf(str2) != -1) {
+                return "true"
+            }
+            else {
+                return "false"
+            }
+        }
+
+        const a = "あけましておめでとうございます";
+        const b = "おめでとう";
+
+        console.log(containStrings(a, b));    // true
+
+        const c = "Love the life you live. Live the life you love.";
+        const d = "best";
+
+        console.log(containStrings(c, d));    // false
+    </script>
+</body>
+
+</html>

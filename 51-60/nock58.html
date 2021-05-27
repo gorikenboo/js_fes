@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function createNameArray(obj) {
+            let nu = [];
+            for (let i = 0; i < 3; i++) {
+                nu.push(obj[i].id)
+            }
+            function cp(c, d) {
+                return c - d;
+            }
+            let cc = nu.sort(cp)
+            let li = [];
+            for (let j = 0; j < 3; j++) {
+                for (let i = 0; i < 3; i++) {
+                    if (obj[i].id == nu[j]) {
+                        li.push(obj[i].name);
+                    }
+                }
+            }
+            return li
+        }
+
+        const objectArray3 = [
+            {
+                id: 8,
+                name: "Emily",
+                age: 29,
+            },
+            {
+                id: 1,
+                name: "John",
+                age: 22,
+            },
+            {
+                id: 4,
+                name: "Bob",
+                age: 30,
+            },
+        ];
+
+        console.log(createNameArray(objectArray3));   // ["John", "Emily", "Bob"]
+
+        const objectArray4 = [
+            {
+                id: 10,
+                name: "taro",
+                age: 29,
+            },
+            {
+                id: 112,
+                name: "hanako",
+                age: 22,
+            },
+            {
+                id: 40,
+                name: "pochi",
+                age: 3,
+            },
+        ];
+        console.log(createNameArray(objectArray4));   // ["pochi", "hanako", "taro"]
+
+    </script>
+</body>
+
+</html>

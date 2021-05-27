@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function combineArray(a, b) {
+            let ne = a.concat(b);
+            return ne
+        }
+
+        const abc = ["a", "b", "c"];
+        const def = ["d", "e", "f"];
+
+        console.log(combineArray(abc, def));    //["a", "b", "c", "d", "e", "f"]
+
+        const gen = ["米", "トイレットペーパー", "ちゅーる", "酒"];
+        const yui = ["洗剤", "肉", "ブロッコリー"];
+
+        console.log(combineArray(gen, yui));    // ["米", "トイレットペーパー", "ちゅーる", "酒", "洗剤", "肉", "ブロッコリー"]
+
+    </script>
+</body>
+
+</html>

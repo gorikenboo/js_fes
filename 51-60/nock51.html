@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function outputProfile(obj) {
+            if (obj.gender == "male") {
+                return "彼の名前は" + obj.name + "で" + obj.age + "才です"
+            }
+            else if (obj.gender == "female") {
+                return "彼女の名前は" + obj.name + "で" + obj.age + "才です"
+            }
+            else {
+                return "情報はありません"
+            }
+        }
+        const taro = {
+            name: 'Taro',
+            age: 25,
+            gender: 'male',
+        };
+
+        console.log(outputProfile(taro));    //彼の名前はTaroで25歳です
+
+        const hanako = {
+            name: 'Hanako',
+            age: 30,
+            gender: 'female',
+        };
+
+        console.log(outputProfile(hanako));    // 彼女の名前はHanakoで30歳です
+
+        const hatena = {
+            name: 'hatena',
+            age: 20,
+        };
+
+        console.log(outputProfile(hatena));   //  情報がありません
+
+    </script>
+</body>
+
+</html>

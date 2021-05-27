@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function createBadScoreArray(a) {
+            function cp(c, d) {
+                return c - d;
+            }
+            let bb = a.split(/\s/).map(Number);
+            let cc = bb.sort(cp)
+            return cc.join(" ")
+        }
+
+        console.log(createBadScoreArray('15 8 9 100 26 1'));    // 1 8 9 15 26 100
+
+        console.log(createBadScoreArray('50 15 89 5 61 2 44'));    // 2 5 15 44 50 61 89
+
+    </script>
+</body>
+
+</html>
