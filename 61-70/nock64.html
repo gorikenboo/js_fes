@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function convertLeet(s) {
+            alp = ["A", "E", "G", "I", "O", "S", "Z", "B", "C", "D", "F", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "T", "U", "V", "W", "X", "Y"]
+            alpp = ["4", "3", "6", "1", "0", "5", "2", "B", "C", "D", "F", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "T", "U", "V", "W", "X", "Y"]
+            let conv = s.split('');
+            let convv = [];
+            for (let i = 0; i < conv.length; i++) {
+                for (let j = 0; j < 26; j++) {
+                    if (alp[j] == conv[i]) {
+                        convv.push(alpp[j]);
+                    }
+
+                }
+            }
+            return convv.join('');
+        }
+
+
+        console.log(convertLeet('ALANTURING'));    // 4L4NTUR1N6
+        console.log(convertLeet('GSACADEMY'));    // 654C4D3MY
+
+    </script>
+</body>
+
+</html>

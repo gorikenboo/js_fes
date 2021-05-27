@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isPerfectNumber(s) {
+            let nu = s.split(/\s/).map(Number);
+            let re = [];
+            for (let j = 0; j < nu.length; j++) {
+                let co = 0;
+                for (let i = 1; i < nu[j]; i++) {
+                    if (nu[j] % i == 0) {
+                        co = co + i;
+                    }
+                }
+                if (co == nu[j]) {
+                    re.push("perfect");
+                }
+                else if (Math.abs(co - nu[j]) == 1) {
+                    re.push("nearly")
+                }
+                else { re.push("neither") }
+            }
+            return re.join(" ")
+        }
+        console.log(isPerfectNumber('28 16 777'));    // perfect nearly neither
+        console.log(isPerfectNumber('3 4 5 6'));    // neither nearly neither perfect
+
+    </script>
+</body>
+
+</html>
