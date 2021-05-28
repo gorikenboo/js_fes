@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function calculatePoint(s) {
+            ss = s.split(",").join(" ").split(" ");
+            let l = ss.length;
+            let re = 0;
+            for (let i = 0; i < l / 2; i++) {
+                let spl1 = ss[2 * i].split("");
+                let spl2 = ss[(2 * i) + 1].split("");
+                if (ss[2 * i] == ss[(2 * i) + 1]) {
+                    re = re + 2;
+                }
+                if (spl1.length == spl2.length) {
+                    let co = 0;
+                    for (let j = 0; j < spl1.length; j++) {
+                        if (spl1[j] != spl2[j]) {
+                            co = co + 1;
+                        }
+                    }
+                    if (co == 1) {
+                        re = re + 1;
+                    }
+                }
+            }
+            return re
+        }
+
+        console.log(calculatePoint('apple aple,orange olange,grape glepe,lemon lemon'));    // 3
+        console.log(calculatePoint('january januarry,february febrary,march march,april aplil,may may,june june,july jury,august ougust,september septenber,october october,november novembar,december dicembar'));    // 13
+
+    </script>
+</body>
+
+</html>

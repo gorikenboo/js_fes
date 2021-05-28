@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getCostForFreeCoffee(s) {
+            let ss = s.split(" ").map(Number);
+            let co = 0;
+            let p = ss[0];
+            let n = 0;
+            while (0 < ss[0]) {
+                ss[0] = Math.floor(ss[0] * ((100 - ss[1]) / 100));
+                p = p + ss[0];
+            }
+
+            return p
+        }
+
+        console.log(getCostForFreeCoffee('300 50'));    // 596
+        console.log(getCostForFreeCoffee('1000 99'));    // 1010
+
+    </script>
+</body>
+
+</html>

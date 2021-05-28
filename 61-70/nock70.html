@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getElevatorMove(s) {
+            let ss = s.split(" ").map(Number);
+            let co = ss[0] - 1;
+            for (let i = 0; i < ss.length - 1; i++) {
+                co = co + Math.abs(ss[i] - ss[i + 1]);
+            }
+            return co
+        }
+
+        console.log(getElevatorMove('3 1 4'));    // 7
+        console.log(getElevatorMove('17 28 11 62 64 4 7 17'));    // 170
+
+    </script>
+</body>
+
+</html>

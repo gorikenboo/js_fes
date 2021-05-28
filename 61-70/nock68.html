@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function formatHour(s) {
+            ss = s.split(" ");
+            let add = Math.floor(Number(ss[1].split(":")[0]) / 24);
+            let time = Math.floor(Number(ss[1].split(":")[0]) % 24);
+            return ss[0].split("/")[0] + "/" + (Number(ss[0].split("/")[1]) + add) + " " + time + ":" + ss[1].split(":")[1]
+        }
+
+        console.log(formatHour('01/27 24:30'));    // 01/28 00:30
+        console.log(formatHour('02/31 73:59'));    // 02/34 01:59
+        console.log(formatHour('12/31 00:00'));    // 12/31 00:00
+        console.log(formatHour('12/31 25:01'));    // 12/32 01:01
+
+    </script>
+</body>
+
+</html>
