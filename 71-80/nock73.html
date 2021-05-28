@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getLastNumber(s) {
+            let ss = s.split(" ").map(Number);
+            let j = 0;
+            for (let i = 0; i < ss.length; i++) {
+                j = j + ss[i];
+            }
+
+            return j % 10
+        }
+
+        console.log(getLastNumber('1 9 8 9 12'));    // 9
+        console.log(getLastNumber('1 1 1 1 6'));    // 0
+
+    </script>
+</body>
+
+</html>

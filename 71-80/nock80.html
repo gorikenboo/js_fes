@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getFibonacciNth(s) {
+            let j = [0n, 1n];
+            for (let i = 0; i < s; i++) {
+                j.push(j[i] + j[i + 1]);
+            }
+            return j[s]
+        }
+
+        console.log(getFibonacciNth(1));    // 1
+        console.log(getFibonacciNth(5));    // 5
+        console.log(getFibonacciNth(10));    // 55
+        console.log(getFibonacciNth(90));    // 2880067194370816120
+
+    </script>
+</body>
+
+</html>

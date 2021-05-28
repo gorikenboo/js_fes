@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function judgeCheapSheet(s) {
+            let ss = s.split(",");
+            let co1 = ss[0].split(" ").map(Number);
+            let co2 = ss[1].split(" ").map(Number);
+            if (co1[2] / (co1[0] * co1[1]) < co2[2] / (co2[0] * co2[1])) {
+                return co1.join(" ")
+            }
+            else if (co1[2] / (co1[0] * co1[1]) > co2[2] / (co2[0] * co2[1])) {
+                return co2.join(" ")
+            }
+            else {
+
+                return "Draw"
+            }
+        }
+
+        console.log(judgeCheapSheet('5 18 1000,12 21 3000'));    // 5 18 1000
+        console.log(judgeCheapSheet('5 5 1800,5 10 3600'));    // DRAW
+
+    </script>
+</body>
+
+</html>

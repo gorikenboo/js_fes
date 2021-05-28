@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isSingleNumber(s) {
+            let ss = s.split(" ").join("").split("");
+            let co = 0;
+            for (let i = 0; i < ss.length - 1; i++) {
+                if (ss[i] != ss[(i + 1)]) {
+                    co = co + 1;
+                }
+            }
+            if (co == 0) {
+                return "Yes"
+            }
+            else {
+                return "No"
+            }
+        }
+
+        console.log(isSingleNumber('11 1'));    // Yes
+        console.log(isSingleNumber('11 11'));    // Yes
+        console.log(isSingleNumber('12 11'));    //  No
+
+    </script>
+</body>
+
+</html>

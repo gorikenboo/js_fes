@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function canDry(s) {
+            let ss = s.split(" ").map(Number);
+            if (25 <= ss[0]) {
+                if (ss[1] <= 40) {
+                    return "No"
+                }
+                else {
+                    return "Yes"
+                }
+            }
+            else {
+                if (ss[1] <= 40) {
+                    return "Yes"
+                }
+                else {
+                    return "No"
+                }
+            }
+        }
+
+
+
+        console.log(canDry('25 50'));    // Yes
+        console.log(canDry('10 20'));    // Yes
+        console.log(canDry('20 50'));    // No
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function filterLogByKeyword(s) {
+            let ss = s.split(" ");
+            let re = [];
+            let sss = ss[0].split(",");
+            let ssss = [sss[1]];
+            for (let i = 1; i < ss.length; i++) {
+                ssss.push(ss[i]);
+            }
+            for (let i = 0; i < ssss.length; i++) {
+                if (ssss[i].indexOf(sss[0]) != -1) {
+                    re.push(ssss[i]);
+                }
+            }
+            if (re.length != 0) {
+                return re.join(" ")
+            }
+            else {
+                return "None"
+            }
+
+        }
+
+        console.log(filterLogByKeyword('gs,gsacademytokyo javascript gsacademyfukuoka gsbase'));    // gsacademytokyo gsacademyfukuoka gsbase
+        console.log(filterLogByKeyword('script,javascript typescript googleappscript java'));    // javascript typescript googleappscript
+        console.log(filterLogByKeyword('dio,Giorno Bucciarati Abbacchio Mista Narancia Fugo Trish'));    // None
+
+    </script>
+</body>
+
+</html>

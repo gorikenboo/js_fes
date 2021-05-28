@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isValidEmail(s) {
+            if (s.indexOf("@") == 0) {
+                return "false"
+            }
+            if (s.indexOf(" ") != -1) {
+                return "false"
+            }
+            let ss = s.replace("@");
+            if (ss.indexOf("@") != -1) {
+                return "false"
+            }
+            else if (ss.indexOf("@") == -1) {
+                if (s.indexOf("@") < s.indexOf(".")) {
+                    return "true"
+                }
+                else if (s.replace(".").indexOf(".") != -1) {
+                    if (s.replace(".").indexOf("@") < s.replace(".").indexOf(".")) {
+                        return "true"
+                    }
+                }
+                else if (s.indexOf("@") > s.indexOf(".")) {
+                    return "false"
+                }
+            }
+            // if (s.indexOf("@") > s.indexOf(".")) {
+            //     return "falses"
+            // }
+
+        }
+
+        console.log(isValidEmail('ccc@aaa.com'));    // true
+        console.log(isValidEmail('c@cc@aaa.com'));    // false
+        console.log(isValidEmail('cc c@aaa.com'));    // false
+        console.log(isValidEmail('cc.c@aaacom'));    // false
+        console.log(isValidEmail('cc.c@aaa.com'));    // true
+        console.log(isValidEmail('@aaa.com'));    // false
+
+    </script>
+</body>
+
+</html>
